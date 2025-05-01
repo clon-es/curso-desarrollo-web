@@ -1,0 +1,405 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Utilities */
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.bg-grey {
+  background-color: #f7f7f7;
+}
+
+/* Variables */
+:root {
+  --primary: black;
+  --b-radius: 5px;
+  --secondary: #828282;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 15px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__logo-image {
+  height: 50px;
+}
+
+.header__nav {
+  margin-left: 20px;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.header__nav-link:hover,
+.header__nav-link:focus {
+  color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__nav {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .header__nav-link {
+    width: 100%;
+  }
+}
+
+/* Hero */
+
+.hero {
+  padding: 40px 20px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-size: 48px;
+  line-height: 48px;
+  max-width: 600px;
+}
+
+.hero__description {
+  color: var(--secondary);
+  max-width: 600px;
+}
+
+.hero__button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--primary);
+  text-decoration: none;
+  border-radius: var(--b-radius);
+  transition: background-color 0.3s ease;
+}
+
+.hero__button:hover {
+  background-color: var(--secondary);
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--b-radius);
+}
+
+/* Gallery */
+
+.gallery {
+  padding: 40px 20px;
+}
+
+.gallery-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.gallery__title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery__item {
+  padding: 20px;
+  border-radius: var(--b-radius);
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--b-radius);
+}
+
+.gallery__item-title {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.gallery__link {
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--secondary);
+}
+
+.gallery__link:hover {
+  color: var(--secondary);
+}
+
+@media (max-width: 600px) {
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About */
+.about {
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+}
+
+.about__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.about__column--text {
+  max-width: 600px;
+}
+
+.about__title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.about__subtitle {
+  font-size: 18px;
+  color: var(--secondary);
+  line-height: 36px;
+}
+
+.about__description {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.about__image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: var(--b-radius);
+}
+
+@media (max-width: 768px) {
+  .about__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about__column--image {
+    margin-top: 20px;
+  }
+}
+
+/* Exhibitions */
+
+.exhibitions {
+  padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.exhibitions__title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.exhibitions__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.exhibitions__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.exhibitions__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--b-radius);
+  margin-bottom: 15px;
+}
+
+.exhibitions__date {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.exhibitions__item-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.exhibitions__description {
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.exhibitions__link {
+  color: var(--secondary);
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .exhibitions__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact */
+.contact {
+  padding: 40px 20px;
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contact__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact__description {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.contact__email {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact__label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact__textarea {
+  height: 150px;
+}
+
+.contact__submit {
+  width: auto;
+  padding: 12px 20px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: var(--b-radius);
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.contact__submit:hover {
+  background-color: var(--secondary);
+}
+
+/*FOOTER*/
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-top: 1px solid var(--secondary);
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  width: 75px;
+  height: auto;
+}
+
+.footer__text {
+  font-size: 12px;
+  text-align: center;
+}
