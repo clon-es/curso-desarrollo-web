@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clones - Artista abstracto</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -38,7 +39,7 @@
 
   <main>
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" data-aos="fade-right">
       <div class="hero__content">
         <h1 class="hero__title">
           El arte es más que color y
@@ -85,7 +86,7 @@
     <!-- ABOUT ME -->
     <section id="about" class="about bg-grey">
       <div class="about__content">
-        <div class="about__column--text">
+        <div class="about__column--text" data-aos="fade-right">
           <h2 class="about__title">Sobre mí</h2>
           <span class="about__subtitle">Soy un apasionado del arte y la pintura.</span>
           <p class="about__description">
@@ -95,7 +96,7 @@
             que expresan mi visión del mundo.
           </p>
         </div>
-        <div class="about__column--image">
+        <div class="about__column--image" data-aos="fade-left">
           <img class="about__image" src="./assets/artista.jpg" alt="Clones artista abstracto" />
         </div>
       </div>
@@ -136,6 +137,10 @@
       <p class="footer__text">Todos los derechos reservados.</p>
     </div>
   </footer>
-
+  <!-- Libreria animaciones -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

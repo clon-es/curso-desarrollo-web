@@ -28,9 +28,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-@import "header";
-@import "footer";
-
 @mixin btn($bg-color, $color) {
   align-self: flex-start;
   padding: 10px 20px;
@@ -40,6 +37,68 @@ body {
   border-radius: $b-radius;
   &:hover {
     background-color: $primary;
+  }
+}
+
+/*Header*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 15px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__logo-image {
+  height: 50px;
+}
+
+.header__nav {
+  margin-left: 20px;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: $primary;
+}
+
+.header__nav-link:hover,
+.header__nav-link:focus {
+  color: $secondary;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__nav {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .header__nav-link {
+    width: 100%;
   }
 }
 
@@ -107,6 +166,10 @@ body {
 .gallery__item {
   padding: 20px;
   border-radius: $b-radius;
+  transition: all 0.5s ease-in;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .gallery__image {
@@ -158,6 +221,19 @@ body {
 .about__title {
   font-size: 30px;
   margin-bottom: 10px;
+  &:hover {
+    animation: slide-in 2s ease-in-out;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(50%);
+  }
 }
 
 .about__subtitle {
@@ -214,6 +290,10 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   padding: 10px;
+  transition: all 0.5s ease-in;
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 
 .exhibitions__image {
@@ -318,4 +398,32 @@ body {
 
 .contact__submit:hover {
   background-color: $secondary;
+}
+
+/*FOOTER*/
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-top: 1px solid $secondary;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  width: 75px;
+  height: auto;
+}
+
+.footer__text {
+  font-size: 12px;
+  text-align: center;
 }
